@@ -15,7 +15,7 @@ If you want to build & install the gem from source:
 
 ```bash
 gem build rainforest.gemspec
-gem install rainforest-0.0.1.gem
+gem install rainforest-2.0.0.gem
 ```
 
 
