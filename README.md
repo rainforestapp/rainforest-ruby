@@ -18,6 +18,10 @@ gem build rainforest.gemspec
 gem install rainforest-2.0.0.gem
 ```
 
+## Documentation
+
+Full documentation is available at [https://docs.rainfroestqa.com](https://docs.rainfroestqa.com).
+
 
 ## Requirements
 
