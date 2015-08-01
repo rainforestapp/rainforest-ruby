@@ -2,6 +2,7 @@ module Rainforest
   class Generator < ApiResource
     attr_accessor :columns
     attr_accessor :created_at
+    attr_accessor :data
     attr_accessor :description
     attr_accessor :generator_type
     attr_accessor :id
@@ -43,12 +44,6 @@ module Rainforest
       self.refresh_from(res.json, res.api_method, res.client)
     end
 
-    def save(params={}, headers={})
-      params = ParamsBuilder.merge(api_attributes, params)
-      res = client.generators.update(id, params, headers)
-      self.refresh_from(res.json, res.api_method, res.client)
-    end
-
     def delete(params={}, headers={})
       res = client.generators.delete(id, params, headers)
       res
@@ -58,11 +53,18 @@ module Rainforest
       GeneratorRowsEndpoint.new(client, self)
     end
 
+    def save(params={}, headers={})
+      params = ParamsBuilder.merge(api_attributes, params)
+      res = client.generators.update(id, params, headers)
+      self.refresh_from(res.json, res.api_method, res.client)
+    end
+
     # Everything below here is used behind the scenes.
     ApiResource.register_api_subclass(self, "generator")
     @api_attributes = {
       :columns => {},
       :created_at => {},
+      :data => {},
       :description => { :editable => true },
       :generator_type => {},
       :id => {},

@@ -30,15 +30,15 @@ module Rainforest
       self.refresh_from(res.json, res.api_method, res.client)
     end
 
+    def delete(params={}, headers={})
+      res = client.sites.delete(id, params, headers)
+      res
+    end
+
     def save(params={}, headers={})
       params = ParamsBuilder.merge(api_attributes, params)
       res = client.sites.update(id, params, headers)
       self.refresh_from(res.json, res.api_method, res.client)
-    end
-
-    def delete(params={}, headers={})
-      res = client.sites.delete(id, params, headers)
-      res
     end
 
     # Everything below here is used behind the scenes.

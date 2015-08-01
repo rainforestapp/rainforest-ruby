@@ -43,12 +43,6 @@ module Rainforest
       self.refresh_from(res.json, res.api_method, res.client)
     end
 
-    def save(params={}, headers={})
-      params = ParamsBuilder.merge(api_attributes, params)
-      res = client.environments.update(id, params, headers)
-      self.refresh_from(res.json, res.api_method, res.client)
-    end
-
     def delete(params={}, headers={})
       res = client.environments.delete(id, params, headers)
       res
@@ -56,6 +50,12 @@ module Rainforest
 
     def runs()
       EnvironmentRunsEndpoint.new(client, self)
+    end
+
+    def save(params={}, headers={})
+      params = ParamsBuilder.merge(api_attributes, params)
+      res = client.environments.update(id, params, headers)
+      self.refresh_from(res.json, res.api_method, res.client)
     end
 
     # Everything below here is used behind the scenes.
