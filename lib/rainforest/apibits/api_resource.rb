@@ -53,12 +53,6 @@ module Rainforest
       @api_attributes.map(&:first)
     end
 
-    def self.editable_api_attribute_names
-      @api_attributes.select do |k, v|
-        v[:editable]
-      end.map(&:first)
-    end
-
     def self.add_api_attribute(name)
       attr_accessor name.to_sym
       @api_attributes[name.to_sym] = {}
@@ -91,14 +85,6 @@ module Rainforest
         if @json[name] != value
           ret[name] = value
         end
-      end
-      ret
-    end
-
-    def editable_api_attributes
-      ret = {}
-      self.class.editable_api_attribute_names.each do |name|
-        ret[name] = self.send(name)
       end
       ret
     end
