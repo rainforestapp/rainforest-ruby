@@ -61,7 +61,7 @@ module Rainforest
       res
     end
 
-    def tests()
+    def associated_tests()
       RunTestsEndpoint.new(client, self)
     end
 
