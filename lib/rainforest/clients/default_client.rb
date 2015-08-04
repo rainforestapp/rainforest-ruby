@@ -8,7 +8,7 @@ module Rainforest
     def refresh_from(api_key)
       headers = {
         :Accept => "application/json",
-        :"Content-Type" => "application/x-www-form-urlencoded",
+        :"Content-Type" => "application/json",
         :CLIENT_TOKEN => api_key,
       }
       params = {}

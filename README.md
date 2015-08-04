@@ -15,12 +15,12 @@ If you want to build & install the gem from source:
 
 ```bash
 gem build rainforest.gemspec
-gem install rainforest-2.0.1.gem
+gem install rainforest-2.0.2.gem
 ```
 
 ## Documentation
 
-Full documentation is available at [https://docs.rainfroestqa.com](https://docs.rainfroestqa.com).
+Full documentation is available at [https://docs.rainforestqa.com](https://docs.rainforestqa.com).
 
 
 ## Requirements
@@ -51,7 +51,7 @@ gem 'rainforest'
 
 ## Using the library
 
-The following section covers some general info about this API library. If you are looking for documentation covering the entire API, check here: [https://docs.rainfroestqa.com](https://docs.rainfroestqa.com).
+The following section covers some general info about this API library. If you are looking for documentation covering the entire API, check here: [https://docs.rainforestqa.com](https://docs.rainforestqa.com).
 
 ### Params and Headers
 

@@ -26,7 +26,7 @@ module Rainforest
       }, params)
       method = ApiMethod.new(:delete, "/tests/:test_id", params, headers, @parent)
       json = @client.execute(method)
-      Test.new(json, method)
+      json
     end
 
     def update(test_id, params={}, headers={})

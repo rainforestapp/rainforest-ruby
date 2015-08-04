@@ -1,5 +1,5 @@
 # Rainforest Ruby bindings
-# API Docs are located at https://docs.rainfroestqa.com
+# API Docs are located at https://docs.rainforestqa.com
 require 'cgi'
 require 'set'
 require 'openssl'
@@ -69,7 +69,7 @@ module Rainforest
   @api_staging = "https://app.rnfrst.com/api/1/"
   @api_version = "v1"
   @support_email = "help@rainforestqa.com"
-  @docs_url = "https://docs.rainfroestqa.com"
+  @docs_url = "https://docs.rainforestqa.com"
 
   class << self
     attr_accessor :api_base, :api_version
