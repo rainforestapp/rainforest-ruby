@@ -20,7 +20,7 @@ gem install rainforest-2.0.2.gem
 
 ## Documentation
 
-Full documentation is available at [https://docs.rainforestqa.com](https://docs.rainforestqa.com).
+Full documentation is available at [https://app.rainforestqa.com/docs](https://app.rainforestqa.com/docs).
 
 
 ## Requirements
