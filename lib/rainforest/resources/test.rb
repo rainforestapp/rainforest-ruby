@@ -19,6 +19,7 @@ module Rainforest
     attr_accessor :tags
     attr_accessor :test_id
     attr_accessor :title
+    attr_accessor :rfml_id
 
     def self.all(params={}, headers={})
       res = client.tests.all(params, headers)
